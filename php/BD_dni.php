@@ -6,7 +6,7 @@ $port = 3306;
 $conn = new mysqli('127.0.0.1', $user, $password, $database, $port);
 
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_errno . " - " . $conn->connect_error);
 }
 
 if ($_GET['dni']) {

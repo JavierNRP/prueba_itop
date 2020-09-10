@@ -3,11 +3,8 @@ $("form").submit(e => {
     e.preventDefault();
 });
 
-var dni;
-
 $('#input_dni').keyup(function () {
-    dni = this.value;
-    if (dni_val(dni)) showCorrect();
+    if (dni_val(this.value)) showCorrect();
     else showIncorrect();
 });
 
@@ -44,7 +41,7 @@ function showIncorrect() {
 };
 
 $('#ask_dni').click(function () {
-    if (dni_val(dni)){
+    if (dni_val($('#input_dni')[0].value)){
         $.ajax({
             url: "/prueba_itop/php/BD_dni.php?dni=" + dni.toString().toUpperCase(),
             type: "GET",

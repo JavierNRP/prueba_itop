@@ -12,11 +12,27 @@
 <body>
 
 	<div class="p-5">
-		<h2>Prueba ITop</h2>
+		<h2>Prueba ITop - Busqueda DNI</h2>
 		<hr>
-		<a href="/prueba_itop/view/dni.html">DNI</a>
-		<hr>
-		<a href="/prueba_itop/php/BD_act.php?request=select">Actividades</a>
+		<form>
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="basic-dni">DNI</span>
+				</div>
+				<input type="text" class="form-control" aria-describedby="basic-dni" id="input_dni">
+			</div>
+			<div class="row">
+				<div class="col">
+					<div id="correct" class="btn-outline-success text-center">DNI valido</div>
+					<div id="incorrect" class="btn-outline-danger text-center">DNI invalido</div>
+				</div>
+				<div class="col"></div>
+				<div class="col">
+					<button type="submit" class="btn btn-outline-info" id="ask_dni">Subir dni</button>
+				</div>
+			</div>
+			<div id="list" class="my-2"></div>			
+		</form>
 
 	</div>
 
@@ -28,7 +44,7 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
 
-	<script src="js/js.js"></script>
+	<script src="../js/dni.js"></script>
 
 </body>
 
